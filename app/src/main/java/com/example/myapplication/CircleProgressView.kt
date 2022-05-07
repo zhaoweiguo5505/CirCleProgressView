@@ -181,12 +181,6 @@ class CircleProgressView : View {
         mPaint.pathEffect = dashPathEffect
         mPaint.shader = mColorShader
 
-        //设置指针的路径位置
-        mPointerPath!!.reset()
-        mPointerPath!!.moveTo(radius, radius - 20)
-        mPointerPath!!.lineTo(radius, radius + 20)
-        mPointerPath!!.lineTo(radius * 2 - tableWidth, radius)
-        mPointerPath!!.close()
     }
     @SuppressLint("DrawAllocation")
     override fun onDraw(canvas: Canvas?) {
