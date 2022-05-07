@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.example.myapplication.CircleProgressView
+        android:layout_width="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="visible"
+        android:layout_gravity="center"
+        app:cp_connecting_text="连接中"
+        app:cp_noConnect_Text="未连接"
+        app:cp_line_color="#9C27B0"
+        app:cp_text_color="#E91E63"
+        app:cp_circle_start_color="#9C27B0"
+        app:cp_circle_end_color="#E91E63"
+        app:cp_line_witdh="30dp"
+        app:cp_circle_color="#E91E63"
+        app:cp_circle_witdh="20dp"
+        app:cp_text_size="20dp"
+        android:id="@+id/circle_center"
+        android:layout_height="300dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="启动"
+        android:gravity="center"
+        android:background="@color/teal_200"
+        android:id="@+id/tv_start"
+        android:textColor="@color/white"
+        android:layout_height="40dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="连接成功"
+        android:gravity="center"
+        android:background="@color/teal_200"
+        android:id="@+id/tv_success"
+        android:textColor="@color/white"
+        android:layout_height="40dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="连接失败"
+        android:gravity="center"
+        android:background="@color/teal_200"
+        android:id="@+id/tv_error"
+        android:textColor="@color/white"
+        android:layout_height="40dp"/>
+</LinearLayout>
