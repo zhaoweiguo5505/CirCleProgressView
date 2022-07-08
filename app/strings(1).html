@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html demo</title>
+</head>
+<body>
+<script>
+
+<!--        这个方法是用来给Flutter调用的（即：Flutter调用js方法）-->
+        function showMessage (message){
+            document.getElementById ("content").innerHTML = message;
+            return true;
+        }
+
+<!--        这个方法是用来发送一个消息给Flutter的（即：js调用Flutter方法）-->
+        function sendMessage (message ) {
+            MessageDeal.postMessage(message);
+            document.getElementById ("content2").innerHTML = message;
+        }
+
+</script>
+<div id="content"><span>Flutter发送过来的消息是： </span>test</div>
+<div id="content2"><span>我发送给Flutter的消息是：</span>test2</div>
+
+<button onclick="sendMessage('我来自js调用sendMessage，我调用了Flutter中的功能')">send a message to Flutter</button>
+
+</body>
+</html>
